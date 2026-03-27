@@ -1,0 +1,418 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+   text-align: center;
+    height: 100vh;
+    background:#7b7b7b; 
+   margin: 0;
+}
+header {
+  background:#2D2D2D;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: #71e62d;
+} 
+header h2 {
+    margin-left: 40px;
+    color: #22f145;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 40px;
+}
+
+ul a{
+    text-decoration: none;
+    color: #10e33e;
+}
+
+li {
+  padding: 10px;
+  list-style-type: none;
+}
+hr{
+    color:white;
+    height: 25px;
+    border: none;
+}
+.parentCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 80px 20px; 
+    gap: 60px;
+    background:black;
+    line-height:30px;
+}
+.text {
+    width: 50%;
+    line-height: 40px;
+    text-align: center; 
+}
+.text h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  color:white;
+
+}
+.text p{
+    font-size: 30px;
+    color:white;
+
+}
+.imgContainer  {
+    width:40%;
+}
+.imgContainer img{
+    width: 250px;
+} 
+/* ABOUT SECTION */
+.about{
+    background-color: black;
+    padding: 100px 20px;
+    margin: 0;
+}
+.about-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 250px 1fr; /* Two side columns and a middle column for the image */
+    grid-template-rows: auto auto;
+    gap: 30px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Center Profile Image */
+section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+.about-profile {
+    grid-column: 2;
+    grid-row: 1 / span 2; /* Spans both rows to stay centered */
+    display: flex;
+    justify-content: center;
+}
+
+.about-profile img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Circle shape */
+    border: 5px solid #2aaa3c;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(42, 170, 60, 0.5);
+}
+
+/* Info Cards Styling (Matching your theme) */
+.info-card {
+    background: linear-gradient(135deg, #daf1d4 0%, #98e59b 100%);
+    padding: 20px;
+    border-radius: 15px;
+    color: black;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.info-card h3 {
+    margin-bottom: 10px;
+    color: #054618;
+}
+
+/* Positioning cards according to your wireframe */
+.card-1 { grid-column: 1; grid-row: 1; }
+.card-2 { grid-column: 3; grid-row: 1; }
+.card-3 { grid-column: 1; grid-row: 2; }
+.card-4 { grid-column: 3; grid-row: 2; }
+
+/* Skills */
+.skills{
+    margin-top: 25px;
+    background-color:black;
+}
+.skills span{
+    display: inline-block;
+    background-color:black;
+    padding: 8px 18px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* project */
+#projects {
+    background-color: black; 
+    padding: 100px 0;   
+    color: white;   
+}
+#filterList{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+#filterList li {
+   display: inline-block;
+   padding: 10px;
+   margin: 5px;
+   border-radius: 30px;
+   cursor: pointer;
+   color: #ffffff;
+   font-weight: bold;
+   transition: 0.3s;
+   background: #2aaa3c;
+ }
+
+#filterList li:nth-child(1){
+    background: #4275ba;
+}
+
+#filterList li:nth-child(2){
+    background: #00c07f;
+}
+#filterList li:nth-child(3){
+
+    background: #cd5554;
+
+}
+
+#filterList li:hover {
+    transform: scale(1.05);
+}
+
+#card-gallery-wrapper{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    width: 90%;
+    margin: auto;
+    gap:20px;  
+}
+
+#card-gallery-wrapper li {
+   background:white;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 4px 12px rgba(73, 223, 93, 0.1);
+   transition: 0.3s;
+ }
+
+#card-gallery-wrapper li:hover{
+    transform: scale(1.03);
+
+}
+
+#card-gallery-wrapper h4 {
+   padding: 20px;
+   margin: 0;
+   color: #333
+ }
+
+#card-gallery-wrapper img {
+   width: 100%;
+   height: 150px;
+   object-fit: cover; 
+
+ }
+.hidden {
+
+    display: none;
+}
+
+.skills-card {
+    background-color:black;
+    color: white;
+    padding: 50px;
+    border-radius: 80px;
+    width: 90%;
+    margin: 50px auto;
+    font-family: sans-serif;
+    border: 1px solid #2aaa3c;
+}
+.skills-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: #71e62d;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+skills span{
+    background: #92A9E1;       
+    color: #2D2D2D;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: rgba(232, 216, 183, 0.2);
+    height: 12px;
+    border-radius: 10px;
+}
+
+.fill {
+    background-color:#5acd66;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* contact */
+.contact-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.contact-card {
+    background: linear-gradient(135deg, #daf1d4 0%, #98e59b 20%, #5acd66 40%, #2aaa3c 60%, #0c7c21 80%, #054618 100%);
+    color:black;            
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+.contact-card h2 {
+    color:black;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.icon-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.icon-group a {
+    color:black;
+    font-size: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+/* Simple hover for all icons */
+.icon-group a:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+footer{
+    background:#2D2D2D;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+/* --- Media Query for Phones (600px and below) --- */
+@media screen and (max-width: 600px) {
+    
+    /* 1. Header & Navigation */
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+    header h2 {
+        margin-left: 0;
+    }
+    ul {
+        margin-right: 0;
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    /* 2. Hero Section */
+    .parentCon {
+        flex-direction: column-reverse; /* Puts image above text on mobile */
+        height: auto;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+    .text {
+        width: 100%;
+    }
+    .text h2 {
+        font-size: 32px;
+    }
+    .text p {
+        font-size: 20px;
+    }
+    .imgContainer {
+        width: 100%;
+    }
+    .imgContainer img {
+        width: 200px;
+    }
+
+    /* 3. About Section Grid */
+    .about-grid-container {
+        grid-template-columns: 1fr; /* Stack everything in one column */
+        grid-template-rows: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+    .about-profile {
+        grid-column: 1;
+        grid-row: 1; /* Profile image stays at the top */
+    }
+    .about-profile img {
+        width: 180px;
+        height: 180px;
+    }
+    /* Move all cards into the same column */
+    .card-1, .card-2, .card-3, .card-4 {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    /* 4. Skills Section */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skill bars */
+    }
+    .skills-card {
+        width: 95%;
+        padding: 30px 20px;
+        border-radius: 30px;
+    }
+
+    /* 5. Projects Section */
+    #filterList li {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    #card-gallery-wrapper {
+        grid-template-columns: 1fr; /* Single column for project cards */
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /* 6. Contact Section */
+    .contact-card {
+        padding: 30px 15px;
+        margin: 0 10px;
+    }
+    .icon-group {
+        gap: 20px;
+    }
+}
