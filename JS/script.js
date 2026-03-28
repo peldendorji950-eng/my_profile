@@ -45,7 +45,7 @@ i = 0;
 setTimeout(type, isDeleting ? 60 : 120);
 
 }
-
+type();
 
 
 
