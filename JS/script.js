@@ -1,3 +1,25 @@
+const categoryList = document.querySelectorAll("#filterList li");
+
+const allCards = document.querySelectorAll("#card-gallery-wrapper li");
+
+function onFilterClick(e) {
+    const categoryNumber = e.target.getAttribute("data-group");
+    
+    allCards.forEach((card) => {
+        if (categoryNumber == "0") {
+            card.classList.remove("hidden");
+        }
+        else if (card.getAttribute("data-group") == categoryNumber) { 
+             card.classList.remove("hidden");
+        }
+        else { 
+             card.classList.add("hidden");
+        }
+    });
+}
+categoryList.forEach((item) => {
+   item.addEventListener("click", onFilterClick); 
+});
 
 const words = [
 "Tech Enthusiast",
@@ -46,31 +68,5 @@ setTimeout(type, isDeleting ? 60 : 120);
 
 }
 type();
-
-
-
-const categoryList = document.querySelectorAll("#filterList li");
-
-const allCards = document.querySelectorAll("#card-gallery-wrapper li");
-
-function onFilterClick(e) {
-    const categoryNumber = e.target.getAttribute("data-group");
-    
-    allCards.forEach((card) => {
-        if (categoryNumber == "0") {
-            card.classList.remove("hidden");
-        }
-        else if (card.getAttribute("data-group") == categoryNumber) { 
-             card.classList.remove("hidden");
-        }
-        else { 
-             card.classList.add("hidden");
-        }
-    });
-}
-categoryList.forEach((item) => {
-   item.addEventListener("click", onFilterClick); 
-});
-
 
 
